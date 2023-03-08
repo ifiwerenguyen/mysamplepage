@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--this is a comment-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    
+    <!--CSS basics, changing properties-->
+    <style>
+        h1 {background-color: rgba(6, 105, 98, 0.488);
+        color: white;
+        padding: 0.4ex;
+        }
+        h2 {color: rgba(18, 163, 129, 0.647);
+        border-style: solid;
+        border-color: blue;
+        border-width: 5vw;
+        }
+
+        .box{
+            display:flex;
+            color: red;
+        }
+
+        .container{
+            display: flex;
+            gap: 4vw;
+        }
+        .container > div{
+            border-style: solid;
+            padding: 1ex;
+        }
+
+        header{
+            position: fixed; top: 0px; left: 0px;
+            width: 100vh;
+            background-color: rgb(50, 50, 50);
+            color: white;
+
+        }
+
+        .logo {
+            position: absolute;
+            top: 200px; left: 300px; width: 4ex;
+            transform: rotate(0deg);
+        }
+
+        .logo:hover{
+            transform: rotate(180deg);
+        }
+        
+        @media (max-width: 400px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Menu</header>
+
+    <h1>Introduction</h1>
+    <h2>How to build a Webpage</h2>
+    <p>I am <em>Nguyen</em>. This is a workshop.</p>
+    <!--adding an image-->
+    <h2>HTML Tags</h2>
+    <img src="https://placeimg.com/640/480/any" alt="Random Picture"/>
+    <!--Creating a shopping list-->
+    <p>Shopping list</p>
+    <!--p is a paragraph, has spacing on top and beneath-->
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    <ol>
+        <li>Milk</li>
+        <li>Sugar</li>
+        <li>Ointment</li>
+    </ol>
+    <pre> will keep   all the spaces.</pre>
+    <div>div puts all into a block, no paragraph</div>
+    <!--Create a Table-->
+    <h2>Some Tables</h2>
+    <table> 
+        <tr>
+            <th>Character</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Granny</td>
+            <td>The Granny of little Red Riding Hood</td>
+        </tr>
+
+    </table>
+    <div class="box">
+       <div class="box1">text 1</div>
+       <div class="box2">text 2</div>
+    </div>
+
+    <h1>Flexbox example</h1>
+
+    <div class="container">
+        <div>Little Red Riding Hood</div>
+        <div>Peter and the Wolf</div>
+        <div>The Little Mermaid</div>
+        <div>Little Red Riding Hood</div>
+        <div>Peter and the Wolf</div>
+        <div>The Little Mermaid</div>
+    </div>
+
+    <div class="logo">
+        ETH
+    </div>
+
+    <!--pops up on my website-->
+    <script>
+        window.alert("Hello you!"); 
+    </script>
+    
+    <div id="world">Hello World</div>
+
+    <!--on the bottom of the page, there is Hello world-->
+    <script>
+        document.addEventListener('DOMContentLoaded', e => {
+        document.body.append("This is the End of the page. See you later! :)");
+        let el = document.querySelector("#world");
+        el.style.color = '#'+Math.floor(Math.random()*16777215).toString(16);});
+    </script>
+    
+
+</body>
+</html>
